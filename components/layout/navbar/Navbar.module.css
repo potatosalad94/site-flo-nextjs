@@ -1,0 +1,141 @@
+.navbarItems {
+  background: linear-gradient(
+    90deg,
+    rgb(110, 94, 254) 0%,
+    rgba(73, 63, 252, 1) 100%
+  );
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.navbarLogo {
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+.navbarLogoIcon {
+  margin-right: 10px;
+  font-size: 2rem;
+}
+
+.navbarMenuIcon {
+  display: none;
+}
+
+.navbarMenu {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: flex-end; */
+  list-style: none;
+  margin-right: 2rem;
+  /* width: 40vw; */
+}
+
+.navbarMenu li {
+  margin: 0 1rem;
+}
+
+/* .navbarMenu.active {
+  display: none;
+} */
+
+.navLinks {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+.navLinks:hover {
+  border-bottom: 3px solid #ffffff;
+}
+
+@media screen and (max-width: 760px) {
+  .navbarItems {
+    position: relative;
+  }
+
+  .navbarMenu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .navbarMenu.active {
+    background-color: #6668f4;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  .navbarMenu li {
+    margin: 0;
+  }
+
+  .navLinks {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
+  .navLinks:hover {
+    background-color: #7577fa;
+    border-radius: 0;
+    border-bottom: none;
+  }
+
+  .navbarLogo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(25%, 50%);
+    margin: 0;
+  }
+
+  .navbarMenuIcon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+}
+
+/* .navbar {
+  width: 100%;
+  background-color: black;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  margin: 0 1rem;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.navbarIcon {
+  font-size: 3rem;
+  margin-right: 0.5rem;
+} */
